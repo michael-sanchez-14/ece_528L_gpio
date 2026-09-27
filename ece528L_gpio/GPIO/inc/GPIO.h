@@ -328,6 +328,65 @@ void LED_Pattern_1(uint8_t button_status);
 void LED_Pattern_2(void);
 
 /**
+ * @brief The LED_Pattern 3 function turns on both the LED and RGB LED and shows a pattern on the PMOD 8LD module
+ *
+ * This function turns LED1 on and sets the RGB LED to blue. On the PMOD 8LD module we display a binary down counter.
+ * The counter starts at 255 and decrease at an decrement of 1 until we reach 0. There is an 100ms delay between
+ * each decrement. The pattern stops once we reach a value of 0 or a change in the switch status
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void LED_Pattern_3(void);
+
+/**
+ * @brief The LED_Pattern 4 function generates a pattern on the PMOD 8LD module
+ *
+ *  This function generates a ring counter where we shift one bit to the left every 200ms.
+ *  The pattern ends once the ledcount = 0x80 or there is a change in the current switch status
+ *
+ *
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void LED_Pattern_4(void);
+
+/**
+ * @brief The LED_Pattern 5 function generates a pattern on the PMOD 8LD module
+ *
+ * This function generates a ring counter where we shift one bit to the right every 200ms.
+ * The pattern ends once the ledcount < 0 or there is a change in the current switch status.
+ *
+ *
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void LED_Pattern_5(void);
+
+/**
+ * @brief The Johnson_Counter function turns on LED1 and the RGB LED and generates a pattern on the PMOD 8LD module
+ *
+ * This function turns the LED1 on while the RGB LED is green. We generate a Johnson Counter pattern onto the PMOD 8LD module
+ * where every transition happens every 200ms. This function only works when both SWT0 and SWT1 are on, else pattern stops.
+ *
+ *
+ *
+ *
+ * @param None
+ *
+ * @return None
+ */
+void Johnson_Counter(void);
+
+/**
  * @brief The LED_Controller function selects and executes an appropriate LED pattern based on button and switch statuses.
  *
  * This function determines the LED pattern to execute based on the given button status and switch status.
@@ -340,6 +399,8 @@ void LED_Pattern_2(void);
  *
  * @return None
  */
+
 void LED_Controller(uint8_t button_status, uint8_t switch_status);
+
 
 #endif /* INC_GPIO_H_ */
