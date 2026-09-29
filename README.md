@@ -21,7 +21,7 @@ In this Lab we used the following Components:
 * MSP432 LaunchPad
 
 ## Analysis and Results:
-We were able to solve all of the required tasks for this lab. The required screenshots can be found in the 
+To start of this lab the procedure tasked us with connecting the PMOD SWT and PMOD 8LD to our MSP432 LaunchPad, after the proper connections were made we built and flashed the code to the board and tested to make sure the components worked. After doing that we moved onto the debugging portion of this Lab, this portion made us check how different registers would update when certain functions are called within the code. We were required to take 4 screenshots. These screenshots can be found in the images folder. Moving on from this we were required to complete 5 different tasks. They were to update the LED_Pattern_1 function, create a function for a binary down counter, creating two different functions for a ring counter to the left and a ring counter to the right and finally one for a johnson counter. We were able to verify our results with the instructor.
 
 ## Known Issues or Limitations:
 In this Lab we did not encounter any limitations or issues.
